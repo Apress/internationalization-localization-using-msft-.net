@@ -1,0 +1,168 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./errata_files/filelist.xml">
+<title>Errata for Internationalization and Localization Using Microsoft </title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>FSTIRCorp</o:Author>
+  <o:LastAuthor>FSTIRCorp</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>28</o:TotalTime>
+  <o:Created>2003-07-23T17:48:00Z</o:Created>
+  <o:LastSaved>2003-07-23T17:48:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>311</o:Words>
+  <o:Characters>1776</o:Characters>
+  <o:Company>IRCorp</o:Company>
+  <o:Lines>14</o:Lines>
+  <o:Paragraphs>3</o:Paragraphs>
+  <o:CharactersWithSpaces>2181</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'>Errata for Internationalization and
+Localization Using Microsoft .NET</h1>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>CorVars.bat</h2>
+
+<p class=MsoNormal>This book was written using Beta 2 and the first release
+version of the Framework.<span style="mso-spacerun: yes">  </span>This section
+covers corrections using Microsoft.Net 2003.<span style="mso-spacerun: yes"> 
+</span>This is the latest version of .NET.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Throughout the book I use command line programs to create
+resource files and DLL’s.<span style="mso-spacerun: yes">  </span>In each of
+these cases I tell the user to run a batch file called <i>CORVARS.BAT</i>.<span
+style="mso-spacerun: yes">  </span>Microsoft supplied this batch file up until
+the latest version of .NET.<span style="mso-spacerun: yes">   </span>This batch
+file does not exist for .NET 2003.<span style="mso-spacerun: yes">  </span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>To get the correct DOS environment setup for command line
+utilities, you will need to run the “Visual Studio .NET 2003 Command Line
+Prompt” from the Windows Start menu.<span style="mso-spacerun: yes"> 
+</span>This provides a command prompt with the correct environment variables.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h2>Chapter 10 pages 308-313</h2>
+
+<p class=MsoNormal><b>Page 312:<o:p></o:p></b></p>
+
+<p class=MsoNormal>The “al” command that is used to compile the
+ch10snvb.resources file into a DLL with delayed signing is incomplete.<span
+style="mso-spacerun: yes">  </span>It is missing the letters “snk” at the end
+of the command.<span style="mso-spacerun: yes">  </span>The command should be: <span
+style='font-family:"Courier New";color:red'>al /out:CH10SNVB.Resources.Dll
+/v:1.0.0.0 /c:en-US /embed:CH10SNVB.en-US.resources,CH10SNVB.en-US.resources
+/delay+ /keyfile:pubkey.snk</span><span style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><b>Page 312:<o:p></o:p></b></p>
+
+<p class=MsoNormal>The text says to use <span style='font-family:"Courier New"'>the
+sn –Vr ch10snvb.resources.dll</span> command followed by the <span
+style='font-family:"Courier New"'>gacutil –i ch10snvb.resources.dll</span>
+command.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>The “sn” command disables version checking of the resource
+DLL so the “gacutil” command can place the resource file in the global assembly
+cache.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>After the “gacutil” command you will need to type in another
+command: <span style='font-family:"Courier New";color:red'>sn –Vr *</span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>This last “sn” command registers the resource file you put
+in the GAC to require no verification when your program tries to use it.<span
+style="mso-spacerun: yes">  </span>This “sn” command is vital to the getting
+this example to work.<span style="mso-spacerun: yes">  </span>Without it you
+will get an error stating that the resource file could not be verified.<span
+style="mso-spacerun: yes">  </span>It is this command that is missing from the
+book.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><b>Page 313:<o:p></o:p></b></p>
+
+<p class=MsoNormal>I tell you to include two assembly directives that allow you
+to get access to the resource file you placed in the GAC.<span
+style="mso-spacerun: yes">  </span>The reason you need to do this is to
+synchronize the program strong name with the resource file strong name.<span
+style="mso-spacerun: yes">  </span>They must both be signed with the same
+public key.</p>
+
+</div>
+
+</body>
+
+</html>
